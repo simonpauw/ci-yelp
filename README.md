@@ -1,20 +1,17 @@
-# Celp
+# CI Yelp
 
-This is Collective Yelp, a business recommendation website based on Yelp data. This is the distribution code for the Celp assignment of the [Collective Intelligence course](https://ci.mprog.nl) at the University of Amsterdam.
+This is Collective Intelligence Yelp. This is the distribution code for the group assignment of the [Collective Intelligentie course](https://ci.mprog.nl) at the University of Amsterdam.
 
-## Install
-`pip install -r requirements.txt`
+# The data
 
-## Run
-`python app.py`
+Some example data is contained in the folder `data`.
 
-## Design overview
-Celp is a Flask application with no database. Data is instead stored in `.json` files as provided by Yelp. All data is stored in the data directory and is split per city. The data files are parsed by the server on boot-up. As such you can add additional data to the data directory and it will show up on the website automatically. Just make sure you name the directory after the city the data is from.
+To keep the repository lean, this contains the data of only two cities: Sun City and Westlake.
 
-The static and templates directory contain all html/css/js files.
+You can download the full dataset here: [full data (4.5 GB)](https://surfdrive.surf.nl/files/index.php/s/d9QtNlGNbYuUnpT/download)
 
-`app.py` is the only controller within the server. Here you will find all routes.
+As a point of advice: don't use the entire dataset for you recommender system and don't commit the full dataset to your repository. Decide which part of the data you want to work on, and only commit that to the collective repository.
 
-`data.py` is responsible for loading and handling the data.
+# Loading the data
 
-`recommender.py` is the recommendation engine.
+The notebook `project.ipynb` contains some example code to help you on your way.
